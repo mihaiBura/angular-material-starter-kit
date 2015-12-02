@@ -1,0 +1,22 @@
+{
+  "name": "angular-material-starter-kit",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Mihai Bura <mihai.bura91@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mihaiBura/angular-material-starter-kit",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "~0.11.4",
+    "angular-ui-router": "~0.2.15"
+  }
+}

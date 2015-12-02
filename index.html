@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Costs / Income</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.min.css">
+</head>
+
+<body ng-app="costIncomeApp">
+
+  <div ng-controller="HomeCtrl as homeCtrl" layout="column" ng-cloak>
+    <md-toolbar class="md-positive">
+      <div class="md-toolbar-tools">
+        <h2 class="md-flex">{{homeCtrl.title}}</h2>
+      </div>
+      <md-fab-speed-dial ng-hide="demo.hidden" md-direction="left" md-open="demo.isOpen" class="md-scale md-fab-top-right" ng-class="{ 'md-hover-full': demo.hover }" ng-mouseenter="demo.isOpen=true" ng-mouseleave="demo.isOpen=false">
+        <md-fab-trigger>
+          <md-button aria-label="menu" class="md-fab md-warn">
+            <md-icon md-font-icon="fa fa-bars fa-lg" aria-label="menu"></md-icon>
+          </md-button>
+        </md-fab-trigger>
+        <md-fab-actions>
+            <md-button aria-label="cost" class="md-fab md-raised md-mini" ui-sref="cost">
+              <md-tooltip>
+                Cost
+              </md-tooltip>
+              <md-icon md-font-icon="fa fa-shopping-cart fa-lg"  ng-style="{color: '#000'}" aria-label="cost"></md-icon>
+            </md-button>
+
+            <md-button aria-label="income" class="md-fab md-raised md-mini" ui-sref="income">
+              <md-tooltip>
+                Income
+              </md-tooltip>
+              <md-icon md-font-icon="fa fa-usd fa-lg" ng-style="{color: '#000'}" aria-label="income"></md-icon>
+            </md-button>
+        </md-fab-actions>
+      </md-fab-speed-dial>
+    </md-toolbar>
+    <md-content flex layout-padding ui-view>
+    </md-content>
+  </div>
+
+  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-aria/angular-aria.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-material/angular-material.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-material/angular-material.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <!-- app -->
+  <script type="text/javascript" src="app/app.js"></script>
+  <script type="text/javascript" src="app/components/cost/cost-ctrl.js"></script>
+  <script type="text/javascript" src="app/components/income/income-ctrl.js"></script>
+  <script type="text/javascript" src="app/components/home/home-ctrl.js"></script>
+  <script type="text/javascript" src="app/services/cost-service.js"></script>
+  <script type="text/javascript" src="app/services/income-service.js"></script>
+
+</body>
+
+</html>
